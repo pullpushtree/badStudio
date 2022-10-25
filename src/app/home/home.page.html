@@ -1,20 +1,296 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div id="top"#top>
+  <header id="header"  #header >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-3 col-3">
+          <h2 class="logo"
+          (click)="closeMenu()"
+          (click)="scroll(top)" >
+          <span class="initial">S</span>erge Badio</h2>
+        </div>
+        <div class="col-md-9 col-sm-9 col-9 text-end">
+          <div class="menu_icon"
+          [class.menu_icon_class]="menuIconVariable"
+          (click)="openMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu" [class.menuClass]="menuVariable">
+            <ul>
+              <li><a (click)="closeMenu()" (click)="scroll(top)">Home</a></li>
+              <li><a (click)="closeMenu()" (click)="scroll(about)">About</a></li>
+              <li><a (click)="closeMenu()" (click)="scroll(work)">Work</a></li>
+              <li><a (click)="closeMenu()" (click)="scroll(services)">Services</a></li>
+              <li><a (click)="closeMenu()" (click)="scroll(contact)">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+   <div class="hero hide" #hero >
+    <div class="container">
+      <div class="row">
+        <img class="hero-img" src="../../assets/images/headshot.jpg" />
+        <div class="hero-text">
+          <div class="text-top">
+            <div>
+              <h1 class="hidden delay-header">
+                Hi, I'm <span class="hidden delay-header">Serge</span>,<br />
+              </h1>
+              <h1 class="hidden delay-header second-h1">
+                a UI/UX designer.
+              </h1>
+            </div>
+
+          </div>
+          <div class="text-bellow">
+
+            <p class="tw hidden delay-header"></p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- ----------- about --------------- -->
+  <div id="about" #about class="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img class="hidden" src="../../assets/images/head4.jpg" />
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title hidden">About Me</h1>
+          <p class="sub-hero hidden">
+            I'm a passionate Web Developer, Programmer, Designer, Entrepreneur
+            who believes in better services and better experiences through valid
+            ethnographic research and day to day use.
+          </p>
+          <!-- <section>
+            <h2 class="layer2">
+              <img src="../../assets/images/headshot.jpg" class="hero-img" />
+              <img src="../../assets/images/shapes/shape1.png"  data-speed=-5 class="layer">
+              <img src="../../assets/images/shapes/shape2.png"  data-speed=2 class="layer">
+              <img src="../../assets/images/shapes/shape3.png"  data-speed=-4 class="layer">
+              <img src="../../assets/images/shapes/shape4.png"  data-speed=3 class="layer">
+              <img src="../../assets/images/shapes/shape5.png"  data-speed=-1 class="layer">
+              <img src="../../assets/images/shapes/shape6.png"  data-speed=4 class="layer">
+              <img src="../../assets/images/shapes/shape7.png"  data-speed=-3 class="layer">
+              <img src="../../assets/images/shapes/shape8.png"  data-speed=5 class="layer">
+              <img src="../../assets/images/shapes/shape9.png"  data-speed=-1 class="layer">
+              <img src="../../assets/images/shapes/shape10.png" data-speed=4 class="layer">
+              <img src="../../assets/images/shapes/shape11.png" data-speed=-2 class="layer">
+              <img src="../../assets/images/shapes/shape12.png" data-speed=3 class="layer">
+              <img src="../../assets/images/shapes/shape13.png" data-speed=-3 class="layer">
+              <img src="../../assets/images/shapes/shape14.png" data-speed=2 class="layer">
+              <img src="../../assets/images/shapes/shape15.png" data-speed=-4 class="layer">
+              <img src="../../assets/images/shapes/shape16.png" data-speed=1 class="layer">
+            </h2>
+          </section> -->
+          <div class="segment hidden">
+            <ion-segment [(ngModel)]="segment" scrollable>
+              <ion-segment-button value="skills"> Skills </ion-segment-button>
+              <ion-segment-button value="experience">Experience</ion-segment-button>
+              <ion-segment-button value="education">Education</ion-segment-button>
+            </ion-segment>
+
+            <div [ngSwitch]="segment">
+              <ion-card *ngSwitchCase="'skills'">
+                <ion-card-content>
+                  <ul>
+                    <li>
+                      <span>UI/UX</span><br />Desigingi Web/App interfaces
+                    </li>
+                    <li>
+                      <span>Web Development</span><br />Web app development
+                    </li>
+                    <li>
+                      <span>Mobile App Development</span><br />Building
+                      corss-platform mobile apps
+                    </li>
+                  </ul>
+                </ion-card-content>
+              </ion-card>
+
+              <ion-card *ngSwitchCase="'experience'">
+                <ion-card-content>
+                  <ul>
+                    <li><span>2021 - 2022</span><br />NDA Client<br/>Lead UI/UX Desinger</li>
+                    <li><span>2020 - 2021</span><br />Kingdom App<br/>Lead UI/UX Desinger & Software Developer</li>
+                    <li><span>2017 - 2020</span><br />Health eFx<br/>Fullstack Software Developer</li>
+                  </ul>
+                </ion-card-content>
+              </ion-card>
+
+              <ion-card *ngSwitchCase="'education'">
+                <ion-card-content >
+                    <ul class="row-segment">
+                      <li class="column-segment">
+                        <span>Compuer Programming</span><br />
+                        Confederation College
+                      </li>
+                      <li class="column-segment2">
+                        <span>College Diploma</span><br />
+                        2015 - 2017
+                      </li>
+                    </ul>
+                    <ul class="row-segment">
+                      <li class="column-segment">
+                        <span>Design Theory</span><br />
+                        George Brown College
+                      </li>
+                      <li class="column-segment2">
+                        <span>Certificate</span><br />
+                        2015 - 2018
+                      </li>
+                    </ul>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- ----------------------- Work ---------------------- -->
+
+   <div id="work" #work class="work">
+    <div class="container">
+      <h1 class="sub-title hidden delay-work">Work</h1>
+      <div class="work-list">
+        <div class="work-img hidden">
+          <img src="../../assets/images/proj2.jpeg" alt="" />
+          <div class="layer">
+            <h3>Social Media App</h3>
+            <a href="#"><ion-icon name="earth-outline"></ion-icon></a>
+          </div>
+        </div>
+        <div class="work-img hidden delay-work">
+          <img src="../../assets/images/proj2.jpeg" alt="" />
+          <div class="layer">
+            <h3>Music App</h3>
+            <a href="#"><ion-icon name="musical-notes-outline"></ion-icon></a>
+          </div>
+        </div>
+        <div class="work-img hidden delay-work">
+          <img src="../../assets/images/proj2.jpeg" alt="" />
+          <div class="layer">
+            <h3>Online Shopping App</h3>
+            <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="btn btn-work hidden delay-work">See more</a>
+    </div>
+  </div>
+
+  <!-- ----------------- services ------------------------ -->
+
+  <div id="services" #services class="services">
+    <div class="container">
+      <h1 class="sub-title hidden">Services</h1>
+      <div class="services-list">
+        <div class="hidden delay-services">
+          <ion-icon name="code-outline"></ion-icon>
+          <h2>Web Design</h2>
+          <p>
+            This is the description so you can understand what I have to offer
+            and maybe reach out to me for some for info
+          </p>
+          <a href="#">Learn more</a>
+        </div>
+        <div class="hidden delay-services">
+          <ion-icon name="color-palette-outline"></ion-icon>
+          <ion-icon name="color-wand-outline"></ion-icon>
+          <h2>UX/UI Design</h2>
+          <p>
+            This is the description so you can understand what I have to offer
+            and maybe reach out to me for some for info
+          </p>
+          <a href="#">Learn more</a>
+        </div>
+        <div class="hidden delay-services">
+          <ion-icon name="tablet-portrait-outline"></ion-icon>
+          <h2>Mobile App Development</h2>
+          <p>
+            This is the description so you can understand what I have to offer
+            and maybe reach out to me for some for info
+          </p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- --------------------- contact  ------------------- -->
+
+  <div id="contact" class="contact" #contact>
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title hidden">Contact Me</h1>
+          <p class="hidden"><ion-icon name="paper-plane-outline"></ion-icon> badiostudio@gmail.com</p>
+          <p class="hidden"><ion-icon name="call-outline"></ion-icon> 647-297-1557</p>
+          <p class="hidden"><ion-icon name="location-outline"></ion-icon>Montreal, QC</p>
+          <div class="social-icons hidden">
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-behance"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-behance"></ion-icon></a>
+          </div>
+          <a href="../../assets/images/logo.jpg" class="btn btn1 download" download
+            >Download CV</a
+          >
+        </div>
+        <div class="contact-right">
+          <form>
+            <ion-input
+              class="hidden contact-input"
+              type="text"
+              name="Name"
+              placeholder="Your name"
+              required
+            ></ion-input>
+            <ion-input
+            class="hidden contact-input"
+              type="email"
+              name="Email"
+              placeholder="Your Email"
+              required
+            ></ion-input>
+            <ion-textarea
+              class="hidden contact-input"
+              name="Message"
+              row="6"
+              placeholder="Your message"
+              required
+            ></ion-textarea>
+            <a class="btn btn1 hidden"
+            >Submit</a
+          >
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>2021 @BadioStudio
+      </p>
+      <span class="emoji">
+        <h1>&#9996;</h1>
+      </span>
+      <p>
+        Made with Angular
+      </p>
+
+    </div>
+  </div>
+</div>
 </ion-content>
