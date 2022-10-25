@@ -1,0 +1,110 @@
+h2, h5, p {
+  color: #1d1d1d;
+}
+
+
+//Mobile
+@media (max-width: 768px) {
+  ion-grid {
+      padding: 1rem;
+  }
+
+  .ae-btn-gradient{
+      color: #1d1d1d;
+      --background: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
+      padding-right: 10px;
+      padding-left: 10px;
+  }
+  .ae-btn-clear{
+      padding-right: 10px;
+      padding-left: 10px;
+  }
+
+  h5 {
+      padding-right: 10%;
+      //width: 50%;
+  }
+
+  .ae-logo {
+     // padding-right: 5%
+     object-fit: cover;
+     padding-right: 5%;
+  }
+
+  .ae-stack {
+      padding-right: 5%;
+      width: 90%;
+  }
+
+  .ae-design{
+      //padding: 2rem;
+      width: 50%;
+  }
+}
+
+
+
+//Desktop
+@media (min-width: 768px) {
+  ion-grid {
+      padding: 4rem;
+  }
+  .ae-btns {
+      display: flex;
+      margin-bottom: 2rem;
+       justify-content: center;
+      ion-icon{
+          padding-right: 10px;
+      }
+
+  }
+  .ae-btn-gradient{
+      color: #1d1d1d;
+      --background: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
+      padding-right: 10px;
+      padding-left: 10px;
+  }
+  .ae-btn-clear{
+      padding-right: 10px;
+      padding-left: 10px;
+  }
+
+
+  .ae-logo {
+     // padding-right: 5%
+     object-fit: cover;
+     padding-right: 5%;
+     width: 50%;
+  }
+
+  .ae-stack {
+      padding-right: 5%;
+      //padding: 10%;
+      object-fit: cover;
+      width: 45%;
+  }
+  .ae-design {
+  //   position: relative;
+  //   display: inline-flex;
+    //padding-right: 10%;
+    max-width: 25%;
+    padding-top: 1rem;
+    }
+
+    .ae-mock{
+        height: 70vh;
+    }
+
+    h5 {
+        padding-right: 10%;
+        width: 100%;
+    }
+
+
+
+    .ae-img{
+      justify-content: center;
+  }
+}
+
+
