@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'work-ie',
     loadChildren: () => import('./pages/work-ie/work-ie.module').then( m => m.WorkIePageModule)
   },
+  {
+    path: 'work-kc',
+    loadChildren: () => import('./pages/work-kc/work-kc.module').then( m => m.WorkKcPageModule)
+  },
 ];
 
 @NgModule({

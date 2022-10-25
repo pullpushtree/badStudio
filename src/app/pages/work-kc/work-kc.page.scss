@@ -1,0 +1,111 @@
+h2, h5, p {
+  color: #1d1d1d;
+}
+
+
+//Mobile
+@media (max-width: 768px) {
+  ion-grid {
+      padding: 1rem;
+  }
+
+  .kc-btn-gradient{
+      color: #1d1d1d;
+      --background: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
+      padding-right: 10px;
+      padding-left: 10px;
+  }
+  .kc-btn-clear{
+      padding-right: 10px;
+      padding-left: 10px;
+  }
+
+  h5 {
+      padding-right: 10%;
+      //width: 50%;
+  }
+
+  .kc-logo {
+     // padding-right: 5%
+     object-fit: cover;
+     padding-right: 5%;
+  }
+
+  .kc-stack {
+      padding-right: 5%;
+      width: 90%;
+  }
+
+  .kc-lion{
+      padding: 2rem;
+      width: 100%;
+  }
+}
+
+
+
+//Desktop
+@media (min-width: 768px) {
+  ion-grid {
+      padding: 4rem;
+  }
+  .kc-btns {
+      display: flex;
+      margin-bottom: 2rem;
+       justify-content: center;
+      ion-icon{
+          padding-right: 10px;
+      }
+
+  }
+  .kc-btn-gradient{
+      color: #1d1d1d;
+      --background: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
+      padding-right: 10px;
+      padding-left: 10px;
+  }
+  .kc-btn-clear{
+      padding-right: 10px;
+      padding-left: 10px;
+  }
+
+
+  ion-grid ion-col .kc-lion {
+      //transform: translate(20%, 0%);
+  }
+
+  .kc-design {
+  //   position: relative;
+  //   display: inline-flex;
+    //padding-right: 10%;
+    max-width: 37%;
+    }
+    h5 {
+        padding-right: 10%;
+        width: 100%;
+    }
+
+
+    .kc-logo {
+       // padding-right: 5%
+       object-fit: cover;
+       padding-right: 5%;
+    }
+
+    .kc-stack {
+        padding-right: 5%;
+        //padding: 10%;
+        object-fit: cover;
+        width: 60%;
+
+    }
+
+    .kc-lion{
+        height: 70vh;
+    }
+    .kc-img{
+      justify-content: center;
+  }
+}
+
+
