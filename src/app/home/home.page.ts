@@ -2,6 +2,8 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { element } from 'protractor';
 import Typewriter from 't-writer.js';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { ToastController } from '@ionic/angular';
 
 @HostListener('window:resize', ['$event'])
 @Component({
@@ -16,7 +18,12 @@ export class HomePage implements OnInit {
   menuIconVariable = false;
   segment = 'skills';
   screenSize: number;
-  constructor(private menuCtrl: MenuController ) {}
+  submitted: boolean;
+  constructor(
+    public afs: AngularFirestore,
+    public toastCtrl: ToastController
+    ) {}
+
   ngOnInit() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -28,15 +35,6 @@ export class HomePage implements OnInit {
         // }
       });
     });
-    // //const move = document.addEventListener('mousemove', parallax);
-    // const move = document.addEventListener('mousemove', parallax =>{
-    //   document.querySelectorAll<HTMLElement>('.layer').forEach(layer => {
-    //     const speed: any = layer.getAttribute('data-speed');
-    //     const x = (window.innerWidth - parallax.pageX*speed)/100;
-    //     const y = (window.innerHeight - parallax.pageY*speed)/100;
-    //     layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
-    //   });
-    // });
     const hiddenElements = document.querySelectorAll('.hidden');
     hiddenElements.forEach((el) => observer.observe(el));
     const target = document.querySelector('.tw');
@@ -76,13 +74,63 @@ export class HomePage implements OnInit {
     this.menuVariable = false;
     this.menuIconVariable = false;
   }
-  // parallax(e){
-  //   document.querySelectorAll<HTMLElement>('.layer').forEach(layer => {
-  //     const speed: any = layer.getAttribute('data-speed');
-  //     const x = (window.innerWidth - e.pageX*speed)/100;
-  //     const y = (window.innerHeight - e.pageY*speed)/100;
-  //     layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
-  //   });
-  // }
+
+  openLinkedin(url: string) {
+    window.open(url, '_system', 'location=yes');
+  }
+
+  openGitHub(url: string) {
+    window.open(url, '_system', 'location=yes');
+  }
+
+  openBehnace(url: string) {
+    window.open(url, '_system', 'location=yes');
+  }
+
+  onSubmit(val: any ) {
+    this.submitted = true;
+    const date: Date = new Date();
+    const date2: number = Date.now();
+    const msgPayload = {
+      subject: val.subject,
+      name: val.fname,
+      email: val.emailAddress,
+      body: val.body,
+      date,
+      date2,
+    };
+    console.log('form submitted', val);
+
+    this.afs
+      .collection('messages')
+      .add(msgPayload)
+      .then((res) => {
+        this.messageSuccess();
+      })
+      .catch((err) => {
+        this.messageFailed();
+        console.log('ERROR => ', err);
+      });
+  }
+
+  async messageSuccess(){
+    await this.toastCtrl.create({
+      message: 'Thank You!, Your message has been sent',
+      duration: 5000,
+      position: 'bottom',
+      color: 'warning'
+
+    }).then(res => res.present());
+  }
+
+  async messageFailed(){
+    await this.toastCtrl.create({
+      message: 'Something went wrong. Please try Again!',
+      duration: 5000,
+      position: 'bottom',
+      color: 'danger'
+
+    }).then(res => res.present());
+  }
 
 }

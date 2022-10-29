@@ -47,7 +47,7 @@ h2, h5, p {
 //Desktop
 @media (min-width: 768px) {
   ion-grid {
-      padding: 4rem;
+    padding: 10px 10%;
   }
   .kc-btns {
       display: flex;
@@ -69,42 +69,34 @@ h2, h5, p {
       padding-left: 10px;
   }
 
-
-  ion-grid ion-col .kc-lion {
-      //transform: translate(20%, 0%);
+  .kc-design {
+    max-width: 37%;
+  }
+  h5 {
+      padding-right: 10%;
+      width: 100%;
   }
 
-  .kc-design {
-  //   position: relative;
-  //   display: inline-flex;
-    //padding-right: 10%;
-    max-width: 37%;
-    }
-    h5 {
-        padding-right: 10%;
-        width: 100%;
-    }
 
+  .kc-logo {
+      // padding-right: 5%
+      object-fit: cover;
+      padding-right: 5%;
+  }
 
-    .kc-logo {
-       // padding-right: 5%
-       object-fit: cover;
-       padding-right: 5%;
-    }
+  .kc-stack {
+      padding-right: 5%;
+      //padding: 10%;
+      object-fit: cover;
+      width: 60%;
 
-    .kc-stack {
-        padding-right: 5%;
-        //padding: 10%;
-        object-fit: cover;
-        width: 60%;
+  }
 
-    }
-
-    .kc-lion{
-        height: 70vh;
-    }
-    .kc-img{
-      justify-content: center;
+  .kc-lion{
+      height: 70vh;
+  }
+  .kc-img{
+    justify-content: center;
   }
 }
 

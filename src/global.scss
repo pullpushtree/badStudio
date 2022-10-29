@@ -30,3 +30,17 @@
   src: url("/fonts/Symbola-Emoji.woff") format("woff"),
     url("/fonts/Symbola-Emoji.ttf") format("ttf");
 }
+
+@font-face {
+  font-family: Domine;
+  src: url('./assets/fonts/Domine.woff2')
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url('./assets/fonts/Raleway.woff2')
+}
+
+ion-item:hover {
+  --ion-item-color: var(--ion-color-warning);
+}

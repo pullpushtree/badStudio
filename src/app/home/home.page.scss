@@ -453,6 +453,45 @@ ion-card {
   background: #28285c;
   float: left
 }
+.btn3{
+  // display: block;
+  // margin: 50px auto;
+  // width: fit-content;
+  // padding: 24px 20px;
+  // border-radius: 6px;
+  // text-decoration: none;
+  // color: #fff;
+  // transition: 0.5s;
+  // background: green;
+  // float: left;
+  /* display: block; */
+  cursor: pointer;
+  margin: 50px auto;
+  width: -moz-fit-content;
+  /* width: fit-content; */
+  //padding: 26px 50px;
+  /* margin: 25px 50px; */
+  border-radius: 6px;
+  /* text-decoration: none; */
+  color: #fff;
+  transition: 0.5s;
+  background: #28285c;
+  /* float: left; */
+  height: -webkit-fill-available;
+
+}
+.inner-span{
+  padding: 20px 35px;
+  height: 52px;
+  text-transform: capitalize;
+  font-size: initial;
+}
+a.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  background: #a6a6a8;
+  border: 1px red solid;
+}
 
 .btn:hover{
   background: #28285c;
@@ -513,6 +552,7 @@ ion-input, ion-textarea{
   border: 0;
   outline: none;
   background: #28285c;
+  border-radius: 6px;
   margin: 15px 0;
   color: #fff;
   font-size: 18px;
@@ -674,7 +714,46 @@ ion-input, ion-textarea{
     }
     .btn1{
       margin: 20px 0 0 0;
+      cursor: pointer;
     }
+    .btn3{
+      // cursor: pointer;
+      // display: block;
+      margin: 50px auto;
+      //width: -moz-fit-content;
+      width: fit-content;
+      padding: 14px 50px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: rgb(231, 21, 21);
+      transition: 0.5s;
+      background: yellow;
+      float: left;
+    }
+
+  }
+  button:hover {
+    cursor: pointer;
+  }
+  .ion-btn{
+    --background: #93e9be;
+    --background-hover: #9ce0be;
+    --background-activated: #88f4be;
+    --background-focused: #88f4be;
+
+    --color: rgb(0, 255, 34);
+
+    --border-radius: 0;
+    --border-color: #000;
+    --border-style: solid;
+    --border-width: 1px;
+
+    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+
+    --ripple-color: deeppink;
+
+    --padding-top: 10px;
+    --padding-bottom: 10px;
   }
 }
 
@@ -847,6 +926,12 @@ ion-input, ion-textarea{
       padding: 14px 60px;
       font-size: 18px;
       float: none;
+    }
+    .btn3{
+      padding: 14px 60px;
+      font-size: 18px;
+      float: none;
+      background: red;
     }
   }
   .contact .row{
