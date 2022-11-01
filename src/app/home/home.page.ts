@@ -49,7 +49,7 @@ export class HomePage implements OnInit {
       });
       writer
         .rest(2000)
-        .type('I like to craft solid and scalable fronted products with great user experinces.')
+        .type('I like to craft solid and scalable fronted products with great user experiences.')
         .rest(4000)
         .clear()
         .type('I specialize in responsive web, desktop, and mobile app design.',)
@@ -83,7 +83,7 @@ export class HomePage implements OnInit {
     window.open(url, '_system', 'location=yes');
   }
 
-  openBehnace(url: string) {
+  openBehance(url: string) {
     window.open(url, '_system', 'location=yes');
   }
 
