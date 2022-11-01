@@ -1,12 +1,138 @@
 h2, h5, p {
   color: #1d1d1d;
 }
+ion-content {
+  background: #080808;
+  color: #fff;
+}
+.container {
+  padding: 10px 10%;
+}
+.container h1{
+  color: #28285c;
+}
+.container p{
+  color: #63638d;
+}
 
+.menu_icon span{
+  width: 28px;
+  height: 3px;
+  background: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
+  display: block;
+  transition: 0.2s ease-in-out;;
+}
+
+.menu_icon span:nth-child(2){
+  margin: 4px 0;
+}
+
+.menu_icon span:nth-child(2){
+  display: none;
+}
+.menu_icon span:nth-child(1){
+  transform: rotate(40deg);
+}
+.menu_icon span:nth-child(3){
+  transform: rotate(-40deg);
+  margin-top: -3px;
+}
+
+.text-end{
+  align-items: center;
+  place-self: center;
+}
+
+// ---------------------------------- nav bar -------------------------------
+.logo{
+  width: auto;
+  cursor: pointer;
+  color: #24248f;
+  font-weight: 800;
+  font-size: 32px;
+  margin: 0px;
+}
+.logo .initial{
+  color: #e3be00;
+}
+
+header{
+  padding: 0px 0;
+  background: #f5f5f6;;
+  z-index: 9999;
+  position: sticky;
+  top: 0;
+}
+
+header .container{
+  padding: 10px 10%;
+}
+
+header .row{
+  display: flex;
+  place-content: space-between;
+}
 
 //Mobile
+@media screen and (width < 950px) {
+  .logo{
+    font-size: 24px;
+  }
+  header .container{
+    padding: 10px 5%;
+  }
+  .menu{
+    position: fixed;
+    right: -280px;
+    top: 49px;
+    width: 280px;
+    height: 100%;
+    background: #f5f5f6;
+  }
+  .menu ul li {
+    font-size: 16px;
+    display : block;
+    text-align: left;
+    margin: 0;
+    padding: 10px 0 10px 26px;
+    border-bottom: 5px solid #24248f11;
+  }
+  .menu ul li a{
+    color: #24248f;
+  }
+  .menu_icon{
+    display: inline-block;
+    right: 0;
+    top: 5px;
+  }
+
+  .menu_icon span{
+    width: 28px;
+    height: 3px;
+    background: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
+    display: block;
+    transition: 0.2s ease-in-out;;
+  }
+
+  .menu_icon span:nth-child(2){
+    margin: 4px 0;
+  }
+
+  .menu_icon span:nth-child(2){
+    display: none;
+  }
+  .menu_icon span:nth-child(1){
+    transform: rotate(40deg);
+  }
+  .menu_icon span:nth-child(3){
+    transform: rotate(-40deg);
+    margin-top: -3px;
+  }
+}
+
 @media (max-width: 768px) {
   ion-grid {
-      padding: 1rem;
+      padding: 2rem;
   }
 
   .ie-btn-gradient{
@@ -93,6 +219,7 @@ h2, h5, p {
 
   .ie-mock{
       height: 90vh;
+      position: fixed;
   }
   .ie-img{
     justify-content: center;

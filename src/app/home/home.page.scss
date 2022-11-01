@@ -88,27 +88,6 @@ ion-content {
   font-weight: 600;
 }
 
-// section {
-//   //position: relative;
-//   overflow: hidden;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-// section img {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// }
-// section h2{
-//   //position: relative;
-//   color: #fff;
-//   font-size: 12em;
-// }
-
 // ---------------------------------- nav bar -------------------------------
 .logo{
   width: auto;
@@ -375,6 +354,7 @@ ion-card {
   border-radius: 10px;
   display: block;
   transition: transform 0.5s;
+  cursor: pointer;
 }
 
 .layer{
@@ -454,29 +434,13 @@ ion-card {
   float: left
 }
 .btn3{
-  // display: block;
-  // margin: 50px auto;
-  // width: fit-content;
-  // padding: 24px 20px;
-  // border-radius: 6px;
-  // text-decoration: none;
-  // color: #fff;
-  // transition: 0.5s;
-  // background: green;
-  // float: left;
-  /* display: block; */
   cursor: pointer;
   margin: 50px auto;
   width: -moz-fit-content;
-  /* width: fit-content; */
-  //padding: 26px 50px;
-  /* margin: 25px 50px; */
   border-radius: 6px;
-  /* text-decoration: none; */
   color: #fff;
   transition: 0.5s;
   background: #28285c;
-  /* float: left; */
   height: -webkit-fill-available;
 
 }
@@ -616,7 +580,7 @@ ion-input, ion-textarea{
   .menu{
     position: fixed;
     right: -280px;
-    top: 37px;
+    top: 49px;
     width: 280px;
     height: 100%;
     background: #f5f5f6;
@@ -627,7 +591,7 @@ ion-input, ion-textarea{
     text-align: left;
     margin: 0;
     padding: 10px 0 10px 26px;
-    border-bottom: 5px solid #15ee0d1c;
+    border-bottom: 5px solid #24248f11;
   }
   .menu ul li a{
     color: #24248f;
@@ -642,7 +606,6 @@ ion-input, ion-textarea{
   .menu_icon span{
     width: 32px;
     height: 3px;
-    //background: pink;
     background: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
     display: block;
     transition: 0.2s ease-in-out;;
@@ -716,21 +679,6 @@ ion-input, ion-textarea{
       margin: 20px 0 0 0;
       cursor: pointer;
     }
-    .btn3{
-      // cursor: pointer;
-      // display: block;
-      margin: 50px auto;
-      //width: -moz-fit-content;
-      width: fit-content;
-      padding: 14px 50px;
-      border-radius: 6px;
-      text-decoration: none;
-      color: rgb(231, 21, 21);
-      transition: 0.5s;
-      background: yellow;
-      float: left;
-    }
-
   }
   button:hover {
     cursor: pointer;
@@ -927,12 +875,6 @@ ion-input, ion-textarea{
       font-size: 18px;
       float: none;
     }
-    .btn3{
-      padding: 14px 60px;
-      font-size: 18px;
-      float: none;
-      background: red;
-    }
   }
   .contact .row{
     flex-direction: column;
@@ -947,9 +889,6 @@ ion-input, ion-textarea{
   .contact-left p ion-icon{
     font-size: 25px;
   }
-  // .social-icons{
-  //   margin-top: 1%;
-  // }
   .copyright{
 
     font-size: 14px;

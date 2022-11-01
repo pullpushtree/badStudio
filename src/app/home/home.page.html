@@ -20,10 +20,10 @@
           <div class="menu" [class.menuClass]="menuVariable">
             <ul>
               <li><a (click)="closeMenu()" (click)="scroll(top)">Home</a></li>
-              <li><a (click)="closeMenu()" (click)="scroll(about)">About</a></li>
-              <li><a (click)="closeMenu()" (click)="scroll(work)">Work</a></li>
-              <li><a (click)="closeMenu()" (click)="scroll(services)">Services</a></li>
+              <li><a (click)="closeMenu()" (click)="scroll(work)">Projects</a></li>
+              <!-- <li><a (click)="closeMenu()" (click)="scroll(services)">Services</a></li> -->
               <li><a (click)="closeMenu()" (click)="scroll(contact)">Contact</a></li>
+              <li><a (click)="closeMenu()" routerLink="/about">About</a></li>
             </ul>
           </div>
         </div>
@@ -56,20 +56,20 @@
     </div>
   </div>
   <!-- ----------- about --------------- -->
-  <div id="about" #about class="about">
+  <div id="about" #about class="about" hidden>
     <div class="container">
       <div class="row">
         <div class="about-col-1">
-          <img class="hidden" src="../../assets/images/head4.jpg" />
+          <img src="../../assets/images/head4.jpg" />
         </div>
         <div class="about-col-2">
-          <h1 class="sub-title hidden">About Me</h1>
-          <p class="sub-hero hidden">
+          <h1 class="sub-title">About Me</h1>
+          <p class="sub-hero">
             I'm a passionate Application Designer, Developer and Entrepreneur
             who believes in better services and better experiences through valid
             ethnographic research and day to day use.
           </p>
-          <div class="segment hidden">
+          <div class="segment">
             <ion-segment [(ngModel)]="segment" scrollable>
               <ion-segment-button value="skills"> Skills </ion-segment-button>
               <ion-segment-button value="experience">Experience</ion-segment-button>
@@ -137,43 +137,43 @@
 
    <!-- ----------------------- Work ---------------------- -->
 
-   <div id="work" #work class="work">
+   <div id="work" #work class="work" >
     <div class="container">
-      <h1 class="sub-title hidden delay-work">Work</h1>
+      <h1 class="sub-title delay-work">Projects</h1>
       <div class="work-list">
-        <div class="work-img hidden">
-          <img src="../../assets/images/proj2.jpeg" alt="" />
+        <div class="work-img " routerLink="/work-kc">
+          <img src="../../assets/images/KC screen.jpg" alt="" />
           <div class="layer">
-            <h3>Social Media App</h3>
-            <a href="#"><ion-icon name="earth-outline"></ion-icon></a>
+            <h3>Kingdom Club</h3>
+            <a><ion-icon name="earth-outline"></ion-icon></a>
           </div>
         </div>
-        <div class="work-img hidden delay-work">
-          <img src="../../assets/images/proj2.jpeg" alt="" />
+        <div class="work-img delay-work" routerLink="/work-ie">
+          <img src="../../assets/images/ie-mock.png" alt="" />
           <div class="layer">
-            <h3>Music App</h3>
-            <a href="#"><ion-icon name="musical-notes-outline"></ion-icon></a>
+            <h3>Intl Excel</h3>
+            <a><ion-icon name="musical-notes-outline"></ion-icon></a>
           </div>
         </div>
-        <div class="work-img hidden delay-work">
-          <img src="../../assets/images/proj2.jpeg" alt="" />
+        <div class="work-img delay-work" routerLink="/work-ae">
+          <img src="../../assets/images/ae-mock.jpg" alt="" />
           <div class="layer">
-            <h3>Online Shopping App</h3>
-            <a href="#"><ion-icon name="cart-outline"></ion-icon></a>
+            <h3>Afro Excel</h3>
+            <a><ion-icon name="cart-outline"></ion-icon></a>
           </div>
         </div>
       </div>
-      <a href="#" class="btn btn-work hidden delay-work">See more</a>
+      <!-- <a href="#" class="btn btn-work delay-work">See more</a> -->
     </div>
   </div>
 
   <!-- ----------------- services ------------------------ -->
-
+<!--
   <div id="services" #services class="services">
     <div class="container">
-      <h1 class="sub-title hidden">Services</h1>
+      <h1 class="sub-title ">Services</h1>
       <div class="services-list">
-        <div class="hidden delay-services">
+        <div class=" delay-services">
           <ion-icon name="color-palette-outline"></ion-icon>
           <ion-icon name="color-wand-outline"></ion-icon>
           <h2>UX/UI Design</h2>
@@ -183,7 +183,7 @@
           </p>
           <a routerLink="/work-kc">Learn more</a>
         </div>
-        <div class="hidden delay-services">
+        <div class="delay-services">
           <ion-icon name="code-outline"></ion-icon>
           <h2>Web Development</h2>
           <p>
@@ -192,7 +192,7 @@
           </p>
           <a routerLink="/work-ie">Learn more</a>
         </div>
-        <div class="hidden delay-services">
+        <div class="delay-services">
           <ion-icon name="tablet-portrait-outline"></ion-icon>
           <h2>Mobile App Development</h2>
           <p>
@@ -205,7 +205,7 @@
     </div>
   </div>
 
-
+ -->
 
   <!-- --------------------- contact  ------------------- -->
 
@@ -213,11 +213,11 @@
     <div class="container">
       <div class="row">
         <div class="contact-left">
-          <h1 class="sub-title hidden">Contact Me</h1>
-          <p class="hidden"><ion-icon name="paper-plane-outline"></ion-icon> badiostudio@gmail.com</p>
-          <p class="hidden"><ion-icon name="call-outline"></ion-icon> 647-297-1557</p>
-          <p class="hidden"><ion-icon name="location-outline"></ion-icon>Montreal, QC</p>
-          <div class="social-icons hidden">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><ion-icon name="paper-plane-outline"></ion-icon> serge_dev@gmail.com</p>
+          <p><ion-icon name="call-outline"></ion-icon> 647-297-1557</p>
+          <p><ion-icon name="location-outline"></ion-icon>Montreal, QC</p>
+          <div class="social-icons">
             <a href="#"(click)="openLinkedin('https://www.linkedin.com/in/serge-badio-b335b6a7/')">
             <ion-icon name="logo-linkedin"></ion-icon>
             </a>
@@ -226,16 +226,12 @@
             </a>
             <a href="#" (click)="openBehnace('https://www.behance.net/gallery/124063985/Kingdom-Club')">
               <ion-icon name="logo-behance"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-behance"></ion-icon></a>
           </div>
-          <a href="../../assets/images/logo.jpg" class="btn btn1 download" download
-            >Download CV</a
-          >
         </div>
         <div class="contact-right">
           <form id="contacForm" (ngSubmit)="onSubmit(contactForm.value); contactForm.reset()" #contactForm="ngForm" novalidate>
             <ion-input
-              class="hidden contact-input"
+              class="contact-input"
               placeholder="Subject"
               id="subject"
               type="text"
@@ -245,7 +241,7 @@
               required>
             </ion-input>
             <ion-input
-              class="hidden contact-input"
+              class="contact-input"
               placeholder="Your name"
               id="fname"
               required minlength="2"
@@ -261,23 +257,22 @@
               </div>
             </div>
             <ion-input
-              class="hidden contact-input"
+              class="contact-input"
               placeholder="Your Email"
               id="emailAddress"
               type="email"
               name="emailAddress"
-              ngModel="test@tst.tst"
+              ngModel
               #emailInput="ngModel"
               required
               email
-              value="test@test.tst"
             ></ion-input>
             <div
               *ngIf="emailInput.invalid && emailInput.touched">
               Your email is required.
             </div>
             <ion-textarea
-              class="hidden contact-input"
+              class="contact-input"
               row="6"
               placeholder="Your message"
               id="body"
@@ -295,12 +290,12 @@
             </div>
 
             <!-- <a
-              class="btn btn1 hidden"
+              class="btn btn1"
               type="submit"
               [class.disabled]="contactForm.invalid"
               >Submit
             </a> -->
-          <div class="hidden">
+          <div>
             <ion-button
             color="darkblue"
             type="submit"
