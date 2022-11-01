@@ -8,7 +8,7 @@ require("dotenv").config();
 const {SENDER_EMAIL, SENDER_APP_PSWD} = process.env;
 
 
-exports.sendEamilNotification=functions.firestore.document("messages/{docId}")
+exports.sendEmailNotification=functions.firestore.document("messages/{docId}")
     .onCreate((snap, ctx)=>{
       const data = snap.data();
 
@@ -27,5 +27,5 @@ exports.sendEamilNotification=functions.firestore.document("messages/{docId}")
         subject: "BadioStudio New Email Notification",
         text: `${data.body}`,
       }).then((res)=>console.log("Successfully sent email"))
-          .catch((err)=>console.log("Failed PORFOLIO send email :", err));
+          .catch((err)=>console.log("Failed PORTFOLIO send email :", err));
     });
