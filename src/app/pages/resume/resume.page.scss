@@ -1,0 +1,326 @@
+#container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+ion-content.background{
+  --background: url(../../../assets/images/bg1.jpg) 0 0/100% 100% no-repeat;
+}
+
+.container{
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 100px;
+  background: transparent;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 10px 25px rgba(102, 4, 40, 0.87);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.container .leftSide{
+  position: relative;
+  background: rgba(0, 0, 0, 0.418);
+  padding: 40px;
+  padding-right: 60px;
+}
+
+.profileText{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.profileText .imgBox {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profileText .imgBox img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileText h2{
+  color: #fff;
+  font-size: 1.5em;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+
+.profileText h2 span{
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+.contactInfo{
+  padding-top: 40px;
+}
+
+.title{
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.contactInfo ul {
+  position: relative;
+  padding: 0;
+}
+
+.contactInfo ul li {
+  position: relative;
+  list-style: none;
+  margin: 10px 0;
+}
+
+.contactInfo ul li .icon {
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+  color: #03a9f4;
+}
+
+.contactInfo ul li span{
+  color: #fff;
+  font-weight: 300;
+  vertical-align: text-top;
+}
+
+.contactInfo ul li a{
+  color: #fff;
+  font-weight: 300;
+  text-decoration: none;
+  vertical-align: text-top;
+}
+.contactInfo ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.contactInfo.education li {
+  margin-bottom: 15px;
+}
+
+.contactInfo.education h5{
+  color: #03a9f4;
+  font-weight: 500;
+}
+
+.contactInfo.education h4:nth-child(2){
+  color: #fff;
+  font-weight: 500;
+}
+
+.contactInfo.education h4{
+  color: #fff;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.contactInfo.language .percent {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: #081921;
+  display: block;
+  margin-top: 5px;
+}
+
+.contactInfo.language .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #03a9f4;
+}
+
+//-----------------------------------------------------------
+
+.container .rightSide{
+  position: relative;
+  background: #2c282ef3;
+  padding: 40px;
+}
+
+.about {
+  margin-bottom: 50px;
+}
+
+.about:last-child{
+  margin-bottom: 0;
+}
+
+.title2{
+  color:  #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+p{
+  color: rgb(230, 230, 230);
+  padding-right: 20px;
+  font-weight: 300;
+}
+
+.about .box{
+  display: flex;
+  flex-direction: row;
+  padding-right: 20px;
+}
+
+.about .box .yearCompany {
+  min-width: 150px;
+}
+
+
+.about .box .yearCompany h5 {
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: 600;
+}
+
+.about .box .text h4 {
+  text-transform: uppercase;
+  color: #58c2f3;
+  font-size: 16px;
+}
+
+.about .box .text p {
+  padding-right: 20px;
+}
+
+.skills .box{
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  justify-content: center;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.about.skills h2{
+  text-transform: uppercase;
+}
+
+.skills .box h4{
+  text-transform: uppercase;
+  color: #848c99;
+  font-weight: 500;
+}
+
+.skills .box .percent{
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #f0f0f0;
+}
+
+.skills .box .percent div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #03a9f4;
+}
+
+ion-badge {
+  --background: #2a7ca2a9;
+  --color: white;
+  --padding-end: 20px;
+  --padding-start: 20px;
+  margin: 1px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+ion-badge:hover {
+  //background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  background: linear-gradient(154deg, #eeec00 0%, #e3be00 30%, #dea800 50%);
+  color: #fff;
+}
+
+ion-label{
+  text-transform: uppercase;
+  color: #58c2f3;
+  font-weight: 500;
+  padding-top: 10px;
+  margin-bottom: -6px;
+  position: relative;
+  display: flex;
+}
+
+ion-list{
+  background: transparent;
+}
+
+@media (max-width: 1000px){
+  .container{
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    inline-size: fit-content;
+  }
+
+  .container .leftSide{
+    position: relative;
+    background: rgba(0, 0, 0, 0.418);
+    padding-right: 40px;
+    padding: 40px;
+  }
+}
+
+@media(max-width: 600px){
+  .container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+
+  .skills .box {
+    flex-direction: column;
+    flex: none;
+    margin: 0;
+    flex-direction: row;
+    grid-template-columns: repeat(1,1fr);
+  }
+  .about .box {
+    margin: 0;
+    flex-direction: column;
+    padding-right: 0px;
+  }
+  .about.skills {
+    margin: 0;
+  }
+
+  .about .box .yearCompany{
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+}

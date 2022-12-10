@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'work-kc',
     loadChildren: () => import('./pages/work-kc/work-kc.module').then( m => m.WorkKcPageModule)
   },
+  {
+    path: 'resume',
+    loadChildren: () => import('./pages/resume/resume.module').then( m => m.ResumePageModule)
+  },
 ];
 
 @NgModule({
