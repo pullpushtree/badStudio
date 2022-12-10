@@ -1,0 +1,30 @@
+<header id="header"  #header >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-3 col-3">
+        <h2 class="logo"
+        (click)="closeMenu()"
+        (click)="home()" >
+        <span class="initial">S</span>erge Badio</h2>
+      </div>
+      <div class="col-md-9 col-sm-9 col-9 text-end">
+        <div class="menu_icon"
+        [class.menu_icon_class]="menuIconVariable"
+        (click)="openMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu" [class.menuClass]="menuVariable">
+          <ul>
+            <li><a (click)="closeMenu()" (click)="home()">Home</a></li>
+            <li><a (click)="closeMenu()" (click)="home()">Projects</a></li>
+            <li><a (click)="closeMenu()" (click)="home()">Contact</a></li>
+            <li><a (click)="closeMenu()" (click)="about()">About</a></li>
+            <li><a (click)="closeMenu()" (click)="resume()">Resume</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
