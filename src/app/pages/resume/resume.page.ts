@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResumePage implements OnInit {
 
-  github = 'https://github.com/pullpushtree/badStudio';
+  github = 'https://github.com/pullpushtree/';
   linkedin = 'https://www.linkedin.com/in/serge-badio-jr-b335b6a7/';
   behance = 'https://www.behance.net/sergebadio';
   website = 'https://www.sergebadio.com';
-  email = 'serge_dev@hotmail.com';
+  email = 'mailto:serge_dev@hotmail.com';
 
   constructor() { }
 
